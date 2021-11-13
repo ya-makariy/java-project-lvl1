@@ -4,13 +4,13 @@
  * This is a general purpose Gradle build.
  * Learn more about Gradle by exploring our samples at https://docs.gradle.org/7.1.1/samples
  */
-repositories {
-    mavenCentral()
-}
-
 plugins {
     id 'com.github.ben-manes.versions' version '0.39.0'
     id 'application'
+}
+
+repositories {
+    mavenCentral()
 }
 
 group = 'hexlet.code'
@@ -22,4 +22,8 @@ application {
 
 compileJava {
     options.release = 16
+}
+
+run {
+    standardInput = System.in
 }
