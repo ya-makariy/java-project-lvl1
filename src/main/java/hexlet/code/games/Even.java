@@ -25,6 +25,6 @@ public class Even {
                 return;
             }
         }
-        System.out.println("Congratulations, " + Engine.getPlayerName() + "!");
+        Engine.grats();
     }
 }

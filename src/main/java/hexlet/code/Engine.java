@@ -17,11 +17,15 @@ public class Engine {
         System.out.print("Welcome to the Brain Games!"
                 + "\nMay I have your name? ");
         setPlayerName();
-        System.out.println("Hello, " + playerName + "!");
+        System.out.println("Hello, " + getPlayerName() + "!");
     }
 
     public static String scanValue() {
         Scanner scan = new Scanner(System.in);
         return scan.next();
+    }
+
+    public static void grats() {
+        System.out.println("Congratulations, " + getPlayerName() + "!");
     }
 }
