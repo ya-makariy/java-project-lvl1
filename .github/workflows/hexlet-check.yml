@@ -32,4 +32,4 @@ jobs:
           java-version: '16'
           distribution: 'adopt'
 
-      - run: make build
+      - run: chmod +x gradlew && make build
