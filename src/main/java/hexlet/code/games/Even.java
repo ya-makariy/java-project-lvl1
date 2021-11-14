@@ -6,8 +6,8 @@ import java.util.Random;
 public class Even {
     public static void even() {
         //Cli.greeter();
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
+        System.out.print("Welcome to the Brain Games!"
+                + "\nMay I have your name? ");
         String playerName = Cli.scanValue();
         System.out.println("Hello, " + playerName + "!"
                 + "\nAnswer 'yes' if the number is even, otherwise answer 'no'.");

@@ -23,8 +23,10 @@ public class Cli {
         switch (gameNum) {
             case ("1"):
                 greeter();
+                break;
             case ("2"):
                 Even.even();
+                break;
             case ("0"):
                 break;
             default:
