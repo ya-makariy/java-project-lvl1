@@ -25,6 +25,12 @@ compileJava {
     options.release = 16
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(16)
+    }
+}
+
 run {
     standardInput = System.in
 }
