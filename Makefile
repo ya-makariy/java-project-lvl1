@@ -11,4 +11,5 @@ lint:
 	./gradlew checkstyleMain
 
 build:
+	chmod +x gradlew
 	./gradlew clean build
