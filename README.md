@@ -8,4 +8,4 @@
 <a href="https://codeclimate.com/github/ya-makariy/java-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/c5a301a07072a63be82c/test_coverage" /></a>
 
 ### How to play
-[![asciicast](https://asciinema.org/a/YKHdHrIsit75yIaQ5fbPdqlXt.png)](https://asciinema.org/a/YKHdHrIsit75yIaQ5fbPdqlXt)
+[![asciicast](https://asciinema.org/a/449108.png)](https://asciinema.org/a/449108)
