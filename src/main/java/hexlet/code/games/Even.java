@@ -11,6 +11,7 @@ public class Even {
         String playerName = Cli.scanValue();
         System.out.println("Hello, " + playerName + "!"
                 + "\nAnswer 'yes' if the number is even, otherwise answer 'no'.");
+
         final int playTimes = 3;
         final int maxRandomValue = 100;
 
@@ -25,7 +26,7 @@ public class Even {
                 System.out.println("Correct!");
             } else {
                 System.out.println("Wrong!\nYou lose!");
-                break;
+                return;
             }
         }
         System.out.println("Congratulations, " + playerName + "!");
