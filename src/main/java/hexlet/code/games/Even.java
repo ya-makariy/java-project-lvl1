@@ -14,14 +14,20 @@ public class Even {
             Random random = new Random();
             int number = 1 + random.nextInt(maxRandomValue);
 
-            System.out.print("Question: " + number
-                    + "\nYour answer: ");
-            String answer = Engine.scanValue();
-
-            if (((number % 2 == 0) && (answer.equals("yes"))) || ((!(number % 2 == 0) && (answer.equals("no"))))) {
-                System.out.println("Correct!");
+            String answer = Engine.question(String.valueOf(number));
+            String correctAnswer;
+            if (number % 2 == 0) {
+                correctAnswer = "yes";
             } else {
-                System.out.println("Wrong!\nYou lose!");
+                correctAnswer = "no";
+            }
+            //if (((number % 2 == 0) && (answer.equals("yes"))) || ((!(number % 2 == 0) && (answer.equals("no"))))) {
+            //    System.out.println("Correct!");
+            //} else {
+            //    System.out.println("Wrong!\nYou lose!");
+            //    return;
+            //}
+            if (Engine.isCorrect(correctAnswer, answer)) {
                 return;
             }
         }

@@ -28,4 +28,21 @@ public class Engine {
     public static void grats() {
         System.out.println("Congratulations, " + getPlayerName() + "!");
     }
+
+    public static String question(String questionValue) {
+        System.out.print("Question: " + questionValue
+                + "\nYour answer: ");
+        return Engine.scanValue();
+    }
+
+    public static boolean isCorrect(String correctAnswer, String answer) {
+        if (correctAnswer.equals(answer)) {
+            System.out.println("Correct!");
+            return false;
+        } else {
+            System.out.println("Wrong!\nYou lose!");
+            return true;
+        }
+    }
 }
+
