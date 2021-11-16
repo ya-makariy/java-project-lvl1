@@ -21,12 +21,7 @@ public class Even {
             } else {
                 correctAnswer = "no";
             }
-            //if (((number % 2 == 0) && (answer.equals("yes"))) || ((!(number % 2 == 0) && (answer.equals("no"))))) {
-            //    System.out.println("Correct!");
-            //} else {
-            //    System.out.println("Wrong!\nYou lose!");
-            //    return;
-            //}
+
             if (Engine.isCorrect(correctAnswer, answer)) {
                 return;
             }

@@ -27,15 +27,8 @@ public class Calc {
                 result = numberA - numberB;
             }
 
-            String question = String.valueOf(numberA) + symbol + String.valueOf(numberB);
+            String question = String.valueOf(numberA) + symbol + numberB;
             String answer = Engine.question(question);
-
-            //if (result == Integer.parseInt(answer)) {
-            //    System.out.println("Correct!");
-            //} else {
-            //    System.out.println("Wrong!\nYou lose!");
-            //    return;
-            //}
 
             if (Engine.isCorrect(String.valueOf(result), answer)) {
                 return;
@@ -44,8 +37,4 @@ public class Calc {
 
         Engine.grats();
     }
-
-    //public static String random() {
-
-    //}
 }
