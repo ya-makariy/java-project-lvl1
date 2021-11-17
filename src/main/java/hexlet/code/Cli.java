@@ -4,6 +4,7 @@ import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Gcd;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 public class Cli {
 
@@ -15,6 +16,7 @@ public class Cli {
                 3 - Calc
                 4 - GCD
                 5 - Progression
+                6 - Prime
                 0 - Exit
                 Your choice:\s""");
         String gameNum = Engine.scanValue();
@@ -33,6 +35,9 @@ public class Cli {
                 break;
             case ("5"):
                 Progression.progression();
+                break;
+            case ("6"):
+                Prime.prime();
                 break;
             case ("0"):
                 break;
