@@ -2,8 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Arrays;
-
 public class Progression {
 
     public static void progression() {
@@ -15,21 +13,28 @@ public class Progression {
         final int maxPlusSize = 10;
 
         for (int i = 0; i < Engine.getPlayTimes(); i++) {
-            String[] row = new String[maxPlusSize / 2 + Engine.randomize(maxPlusSize)];
+            int rowLength = maxPlusSize / 2 + Engine.randomize(maxPlusSize);
             int step = 1 - maxStep / 2 + Engine.randomize(maxStep);
             int startValue = -maxStartValue / 2 + Engine.randomize(maxStartValue);
 
-            for (int j = 0; j < row.length; j++) {
+            int randomNumber = Engine.randomize(rowLength);
+            String correctAnswer = "";
+            String question = "";
+            for (int j = 0; j < rowLength; j++) {
                 startValue = startValue + step;
-                row[j] = String.valueOf(startValue);
+
+                if (j == randomNumber) {
+                    correctAnswer = String.valueOf(startValue);
+                    question = question + ".. ";
+                } else {
+                    question = question + startValue + " ";
+                }
             }
 
-            int randomNumber = Engine.randomize(row.length);
-            String correctAnswer = row[randomNumber];
-            row[randomNumber] = "..";
+           // String correctAnswer = row[randomNumber];
+            //row[randomNumber] = "..";
 
-            String answer = Engine.question(Arrays.deepToString(row));
-
+            String answer = Engine.question(question);
             if (Engine.isCorrect(correctAnswer, answer)) {
                 return;
             }

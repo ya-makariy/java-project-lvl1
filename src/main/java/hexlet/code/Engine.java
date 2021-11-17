@@ -45,7 +45,7 @@ public class Engine {
             System.out.println("Correct!");
             return false;
         } else {
-            System.out.println("Wrong!\nYou lose!");
+            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'");
             return true;
         }
     }
