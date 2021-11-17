@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
@@ -13,6 +14,10 @@ public class Engine {
         return playerName;
     }
 
+    public static int getPlayTimes() {
+        final int playTimes = 3;
+        return playTimes;
+    }
     public static void gameGreeting() {
         System.out.print("Welcome to the Brain Games!"
                 + "\nMay I have your name? ");
@@ -43,6 +48,11 @@ public class Engine {
             System.out.println("Wrong!\nYou lose!");
             return true;
         }
+    }
+
+    public static int randomize(int number) {
+        Random random = new Random();
+        return random.nextInt(number);
     }
 }
 

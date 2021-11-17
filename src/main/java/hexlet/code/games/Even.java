@@ -1,18 +1,15 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import java.util.Random;
 
 public class Even {
     public static void even() {
         Engine.gameGreeting();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        final int playTimes = 3;
         final int maxRandomValue = 100;
 
-        for (int i = 0; i < playTimes; i++) {
-            Random random = new Random();
-            int number = 1 + random.nextInt(maxRandomValue);
+        for (int i = 0; i < Engine.getPlayTimes(); i++) {
+            int number = 1 + Engine.randomize(maxRandomValue);
 
             String answer = Engine.question(String.valueOf(number));
             String correctAnswer;

@@ -1,22 +1,19 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import java.util.Random;
 
 public class Calc {
     public static void calc() {
         Engine.gameGreeting();
         System.out.println("What is the result of the expression?");
 
-        final int playTimes = 3;
         final int maxRandomValue = 20;
         final String symbols = "+-*";
 
-        for (int i = 0; i < playTimes; i++) {
-            Random random = new Random();
-            int numberA = 1 + random.nextInt(maxRandomValue);
-            int numberB = 1 + random.nextInt(maxRandomValue);
-            char symbol = symbols.charAt(random.nextInt(symbols.length()));
+        for (int i = 0; i < Engine.getPlayTimes(); i++) {
+            int numberA = 1 + Engine.randomize(maxRandomValue);
+            int numberB = 1 + Engine.randomize(maxRandomValue);
+            char symbol = symbols.charAt(Engine.randomize(symbols.length()));
             int result;
 
             if (symbol == '*') {
