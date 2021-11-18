@@ -6,19 +6,19 @@
 
 ### How to play
 1. Greet
-[![asciicast](https://asciinema.org/a/449947.png)](https://asciinema.org/a/449947)
+[![asciicast1](https://asciinema.org/a/449947.png)](https://asciinema.org/a/449947)
 
 2. Even
-[![asciicast](https://asciinema.org/a/449948.png)](https://asciinema.org/a/449948)
+[![asciicast2](https://asciinema.org/a/449948.png)](https://asciinema.org/a/449948)
 
 3. Calc
-[![asciicast](https://asciinema.org/a/449949.png)](https://asciinema.org/a/449949)
+[![asciicast3](https://asciinema.org/a/449949.png)](https://asciinema.org/a/449949)
 
 4. GCD
-[![asciicast](https://asciinema.org/a/449950.png)](https://asciinema.org/a/449950)
+[![asciicast4](https://asciinema.org/a/449950.png)](https://asciinema.org/a/449950)
 
 5. Progression
-[![asciicast](https://asciinema.org/a/449951.png)](https://asciinema.org/a/449951)
+[![asciicast5](https://asciinema.org/a/449951.png)](https://asciinema.org/a/449951)
 
 6. Prime
-[![asciicast](https://asciinema.org/a/449952.png)](https://asciinema.org/a/449952)
+[![asciicast6](https://asciinema.org/a/449952.png)](https://asciinema.org/a/449952)
