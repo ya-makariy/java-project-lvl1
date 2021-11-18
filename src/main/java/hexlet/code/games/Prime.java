@@ -7,7 +7,6 @@ public class Prime {
         Engine.gameGreeting();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         final int maxNumber = 100;
-
         for (int i = 0; i < Engine.getPlayTimes(); i++) {
             int question = 1 + Engine.randomize(maxNumber);
             String correctAnswer = "yes";
