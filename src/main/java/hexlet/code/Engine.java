@@ -19,8 +19,10 @@ public class Engine {
         return playTimes;
     }
     public static void gameGreeting() {
-        System.out.print("Welcome to the Brain Games!"
-                + "\nMay I have your name? ");
+        System.out.print("""
+
+                Welcome to the Brain Games!
+                May I have your name?\s""");
         setPlayerName();
         System.out.println("Hello, " + getPlayerName() + "!");
     }
