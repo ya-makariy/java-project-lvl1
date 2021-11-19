@@ -6,6 +6,7 @@ public class Gcd {
     public static void gcd() {
         Engine.gameGreeting();
         System.out.println("Find the greatest common divisor of given numbers.");
+
         final int maxRandomValue = 100;
         for (int i = 0; i < Engine.getPlayTimes(); i++) {
             int numberA = 1 + Engine.randomize(maxRandomValue);

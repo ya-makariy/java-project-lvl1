@@ -7,6 +7,7 @@ public class Progression {
     public static void progression() {
         Engine.gameGreeting();
         System.out.println("What number is missing in the progression?");
+
         final int maxStartValue = 100;
         final int maxStep = 20;
         final int maxPlusSize = 10;

@@ -6,6 +6,7 @@ public class Calc {
     public static void calc() {
         Engine.gameGreeting();
         System.out.println("What is the result of the expression?");
+
         final int maxRandomValue = 20;
         final String symbols = "+-*";
         for (int i = 0; i < Engine.getPlayTimes(); i++) {
