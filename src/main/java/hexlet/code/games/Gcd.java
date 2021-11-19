@@ -14,11 +14,6 @@ public class Gcd {
             String question = numberA + " " + numberB;
             String answer = Engine.question(question);
             String correctAnswer = maxgcd(numberA, numberB);
-            //for (int j = 2; j <= Math.min(numberA, numberB); j++) {
-            //    if ((numberA % j == 0) && (numberB % j == 0)) {
-            //        correctAnswer = String.valueOf(j);
-            //    }
-            //}
             if (Engine.isCorrect(correctAnswer, answer)) {
                 return;
             }
