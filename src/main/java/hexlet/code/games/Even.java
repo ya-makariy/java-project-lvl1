@@ -11,12 +11,12 @@ public class Even {
         for (int i = 0; i < Engine.getPlayTimes(); i++) {
             int number = 1 + Engine.randomize(maxRandomValue);
             String answer = Engine.question(String.valueOf(number));
-            String correctAnswer;
-            if (number % 2 == 0) {
-                correctAnswer = "yes";
-            } else {
-                correctAnswer = "no";
-            }
+            String correctAnswer = number % 2 == 0 ? "yes" : "no";
+            //if (number % 2 == 0) {
+            //    correctAnswer = "yes";
+            //} else {
+            //    correctAnswer = "no";
+            //}
             if (Engine.isCorrect(correctAnswer, answer)) {
                 return;
             }
