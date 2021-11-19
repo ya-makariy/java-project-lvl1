@@ -19,15 +19,6 @@ public class Progression {
             String[] qna = questionAnswer(rowLength, startValue, step, randomNumber);
             String question = qna[0];
             String correctAnswer = qna[1];
-            //for (int j = 0; j < rowLength; j++) {
-            //    startValue = startValue + step;
-            //    if (j == randomNumber) {
-            //        correctAnswer = String.valueOf(startValue);
-            //        question.append(".. ");
-            //    } else {
-            //        question.append(startValue).append(" ");
-            //    }
-            //}
             String answer = Engine.question(question);
             if (Engine.isCorrect(correctAnswer, answer)) {
                 return;
