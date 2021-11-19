@@ -9,7 +9,7 @@ public class Calc {
 
         final int maxRandomValue = 20;
         final String symbols = "+-*";
-        //for (int i = 0; i < Engine.getPlayTimes(); i++) {
+        for (int i = 0; i < Engine.getPlayTimes(); i++) {
             int numberA = 1 + Engine.randomize(maxRandomValue);
             int numberB = 1 + Engine.randomize(maxRandomValue);
             char symbol = symbols.charAt(Engine.randomize(symbols.length()));
@@ -26,7 +26,7 @@ public class Calc {
             if (Engine.isCorrect(String.valueOf(result), answer)) {
                 return;
             }
-        //}
+        }
         Engine.grats();
     }
 }
