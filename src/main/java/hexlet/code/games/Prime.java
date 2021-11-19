@@ -11,13 +11,6 @@ public class Prime {
         for (int i = 0; i < Engine.getPlayTimes(); i++) {
             int question = 1 + Engine.randomize(maxNumber);
             String correctAnswer = isPrime(question);
-            //for (int j = 2; j < question / 2; j++) {
-            //    if (question % j == 0) {
-            //        correctAnswer = "no";
-            //        break;
-            //    }
-                //correctAnswer = question % j == 0 ? "no": "yes";
-            //}
             String answer = Engine.question(String.valueOf(question));
             if (Engine.isCorrect(correctAnswer, answer)) {
                 return;
