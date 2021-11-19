@@ -10,6 +10,7 @@ check-updates:
 lint:
 	./gradlew checkstyleMain
 
+.PHONY: build
 build:
 	chmod +x gradlew
 	./gradlew clean build
