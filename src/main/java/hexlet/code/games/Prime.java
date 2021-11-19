@@ -12,11 +12,11 @@ public class Prime {
             int question = 1 + Engine.randomize(maxNumber);
             String correctAnswer = "yes";
             for (int j = 2; j < question / 2; j++) {
-                //if (question % j == 0) {
-                //    correctAnswer = "no";
-                //    break;
-                //}
-                correctAnswer = question % j == 0 ? "no": "yes";
+                if (question % j == 0) {
+                    correctAnswer = "no";
+                    break;
+                }
+                //correctAnswer = question % j == 0 ? "no": "yes";
             }
             String answer = Engine.question(String.valueOf(question));
             if (Engine.isCorrect(correctAnswer, answer)) {
