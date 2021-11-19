@@ -17,17 +17,17 @@ public class Progression {
             int startValue = -maxStartValue / 2 + Engine.randomize(maxStartValue);
             int randomNumber = Engine.randomize(rowLength);
             String correctAnswer = "";
-            String question = "";
+            StringBuilder question = new StringBuilder();
             for (int j = 0; j < rowLength; j++) {
                 startValue = startValue + step;
                 if (j == randomNumber) {
                     correctAnswer = String.valueOf(startValue);
-                    question = question + ".. ";
+                    question.append(".. ");
                 } else {
-                    question = question + startValue + " ";
+                    question.append(startValue).append(" ");
                 }
             }
-            String answer = Engine.question(question);
+            String answer = Engine.question(question.toString());
             if (Engine.isCorrect(correctAnswer, answer)) {
                 return;
             }
