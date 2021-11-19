@@ -12,11 +12,6 @@ public class Even {
             int number = 1 + Engine.randomize(maxRandomValue);
             String answer = Engine.question(String.valueOf(number));
             String correctAnswer = number % 2 == 0 ? "yes" : "no";
-            //if (number % 2 == 0) {
-            //    correctAnswer = "yes";
-            //} else {
-            //    correctAnswer = "no";
-            //}
             if (Engine.isCorrect(correctAnswer, answer)) {
                 return;
             }
