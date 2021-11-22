@@ -21,8 +21,8 @@ public class Engine {
     public static void gameGreeting() {
         System.out.print("""
 
-                Welcome to the Brain Games!\s""");
-        System.out.println("May I have your name?");
+                Welcome to the Brain Games!
+                May I have your name?\s""");
         setPlayerName();
         System.out.println("Hello, " + getPlayerName() + "!");
     }
@@ -47,8 +47,8 @@ public class Engine {
             System.out.println("Correct!");
             return false;
         } else {
-            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
-            System.out.println("Let's try again, " + getPlayerName() +"!");
+            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'."
+                    + "Let's try again, " + getPlayerName() +"!");
             return true;
         }
     }
@@ -58,4 +58,3 @@ public class Engine {
         return random.nextInt(number);
     }
 }
-
