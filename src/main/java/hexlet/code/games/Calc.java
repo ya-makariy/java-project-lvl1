@@ -14,7 +14,7 @@ public class Calc {
             int numberB = 1 + Engine.randomize(maxRandomValue);
             char symbol = symbols.charAt(Engine.randomize(symbols.length()));
             int correctAnswer = result(numberA, numberB, symbol);
-            String question = String.valueOf(numberA) + symbol + numberB;
+            String question = String.valueOf(numberA) + " " + symbol + " " + numberB;
             String answer = Engine.question(question);
             if (Engine.isCorrect(String.valueOf(correctAnswer), answer)) {
                 return;
