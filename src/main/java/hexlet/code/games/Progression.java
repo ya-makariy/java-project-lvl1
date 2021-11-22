@@ -17,7 +17,7 @@ public class Progression {
             int startValue = -maxStartValue / 2 + Engine.randomize(maxStartValue);
             int randomNumber = Engine.randomize(rowLength);
             String[] qna = questionAnswer(rowLength, startValue, step, randomNumber);
-            String question = qna[0];
+            String question = qna[0].substring(0, qna[0].length() - 1);
             String correctAnswer = qna[1];
             String answer = Engine.question(question);
             if (Engine.isCorrect(correctAnswer, answer)) {
