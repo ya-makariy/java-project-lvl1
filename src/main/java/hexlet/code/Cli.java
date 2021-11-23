@@ -7,7 +7,7 @@ import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
 public class Cli {
-
+    // сделать в cli только хелоу ворлд
     public static void choice() {
         System.out.print("""
                 Please enter the game number and press Enter.
