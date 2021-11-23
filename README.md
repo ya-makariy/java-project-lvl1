@@ -4,6 +4,9 @@
 ### CodeClimate Maintainability Badge
 [![Maintainability](https://api.codeclimate.com/v1/badges/c5a301a07072a63be82c/maintainability)](https://codeclimate.com/github/ya-makariy/java-project-lvl1/maintainability)
 
+### Last pipeline status
+![[Pipeline status](https://github.com/ya-makariy/java-project-lvl1/actions/workflows/build.yml/badge.svg)](https://github.com/ya-makariy/java-project-lvl1/actions)
+
 ### How to play
 1. Greet
 [![asciicast1](https://asciinema.org/a/449947.png)](https://asciinema.org/a/449947)
