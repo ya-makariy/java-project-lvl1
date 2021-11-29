@@ -10,7 +10,6 @@ public class App {
     private static String gameNum;
 
     public static void main(String[] args) {
-        //Cli.choice();
         System.out.print("""
                 Please enter the game number and press Enter.
                 1 - Greet
@@ -21,10 +20,10 @@ public class App {
                 6 - Prime
                 0 - Exit
                 Your choice:\s""");
-        gameNum = Engine.scanValue();
         choice();
     }
     public static void choice() {
+        gameNum = Engine.scanValue();
         switch (gameNum) {
             case ("1"):
                 Engine.gameGreeting();
@@ -47,7 +46,7 @@ public class App {
             case ("0"):
                 break;
             default:
-                System.out.println("Sorry I don't know this kind of game");
+                System.out.print("Sorry I don't know this kind of game, please make choice again: ");
                 choice();
         }
     }

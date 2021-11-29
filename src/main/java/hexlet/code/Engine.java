@@ -57,4 +57,16 @@ public class Engine {
         Random random = new Random();
         return random.nextInt(number);
     }
+
+    public static void fullGame(String rules, String[][] qna) {
+        gameGreeting();
+        System.out.println(rules);
+        for (int i = 0; i < getPlayTimes(); i++) {
+            String answer = question(qna[i][0]);
+            if (isCorrect(qna[i][1], answer)) {
+                return;
+            }
+        }
+        grats();
+    }
 }
