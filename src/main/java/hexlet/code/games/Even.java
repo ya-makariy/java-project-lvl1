@@ -3,10 +3,8 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Even {
-
-    private static String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";;
-
     public static void even() {
+        String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         Engine.fullGame(rules, generateValues());
     }
 
