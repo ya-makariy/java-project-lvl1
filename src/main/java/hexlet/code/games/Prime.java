@@ -4,19 +4,20 @@ import hexlet.code.Engine;
 
 public class Prime {
     public static void prime() {
-        Engine.gameGreeting();
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+        String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        Engine.fullGame(rules, generateValues());
+    }
 
+
+    public static String[][] generateValues() {
         final int maxNumber = 100;
+        String[][] qna = new String[Engine.getPlayTimes()][2];
         for (int i = 0; i < Engine.getPlayTimes(); i++) {
             int question = 1 + Engine.randomize(maxNumber);
-            String correctAnswer = isPrime(question);
-            String answer = Engine.question(String.valueOf(question));
-            if (Engine.isCorrect(correctAnswer, answer)) {
-                return;
-            }
+            qna[i][0] = String.valueOf(question);
+            qna[i][1] = isPrime(question);
         }
-        Engine.grats();
+        return qna;
     }
 
     public static String isPrime(int question) {
