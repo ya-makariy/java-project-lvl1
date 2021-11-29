@@ -25,11 +25,11 @@ public class Progression {
     }
 
     public static int valueLength(int max) {
-        return (max/2 + Engine.randomize(max));
+        return (max / 2 + Engine.randomize(max));
     }
 
     public static int value(int max) {
-        return (-max/2 + Engine.randomize(max));
+        return (-max / 2 + Engine.randomize(max));
     }
 
     public static String[] questionAnswer(int rowLength, int startValue, int step, int randomNumber) {
