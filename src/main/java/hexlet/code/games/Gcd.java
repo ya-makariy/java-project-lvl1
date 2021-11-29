@@ -4,21 +4,20 @@ import hexlet.code.Engine;
 
 public class Gcd {
     public static void gcd() {
-        Engine.gameGreeting();
-        System.out.println("Find the greatest common divisor of given numbers.");
+        String rules = "Find the greatest common divisor of given numbers.";
+        Engine.fullGame(rules, generateValues());
+    }
 
+    public static String[][] generateValues() {
+        String[][] qna = new String[Engine.getPlayTimes()][2];
         final int maxRandomValue = 100;
         for (int i = 0; i < Engine.getPlayTimes(); i++) {
             int numberA = 1 + Engine.randomize(maxRandomValue);
             int numberB = 1 + Engine.randomize(maxRandomValue);
-            String question = numberA + " " + numberB;
-            String answer = Engine.question(question);
-            String correctAnswer = maxgcd(numberA, numberB);
-            if (Engine.isCorrect(correctAnswer, answer)) {
-                return;
-            }
+            qna[i][0] = numberA + " " + numberB;
+            qna[i][1] = maxgcd(numberA, numberB);
         }
-        Engine.grats();
+        return qna;
     }
 
     public static String maxgcd(int numberA, int numberB) {
