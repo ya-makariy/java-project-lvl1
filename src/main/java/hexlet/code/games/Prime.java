@@ -15,17 +15,17 @@ public class Prime {
         for (int i = 0; i < Engine.getPlayTimes(); i++) {
             int question = 1 + Engine.randomize(maxNumber);
             qna[i][0] = String.valueOf(question);
-            qna[i][1] = isPrime(question);
+            qna[i][1] = isPrime(question) ? "yes": "no";
         }
         return qna;
     }
 
-    public static String isPrime(int question) {
-        for (int j = 2; j < question / 2; j++) {
-            if (question % j == 0) {
-                return "no";
+    public static boolean isPrime(int question) {
+        for (int i = 2; i < question / 2; i++) {
+            if (question % i == 0) {
+                return false;
             }
         }
-        return "yes";
+        return true;
     }
 }
