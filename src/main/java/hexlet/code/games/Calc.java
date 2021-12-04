@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Calc {
-    static final String RULES = "What is the result of the expression?";
+    private static final String RULES = "What is the result of the expression?";
     static final String[] SYMBOLS = new String[]{"+", "-", "*"};
 
     public static void calc() {

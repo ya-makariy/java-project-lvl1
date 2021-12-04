@@ -3,13 +3,8 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
+    private static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static void prime() {
-        String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        Engine.fullGame(rules, generateValues());
-    }
-
-
-    public static String[][] generateValues() {
         final int maxNumber = 100;
         String[][] qna = new String[Engine.getPlayTimes()][2];
         for (int i = 0; i < Engine.getPlayTimes(); i++) {
@@ -17,7 +12,7 @@ public class Prime {
             qna[i][0] = String.valueOf(question);
             qna[i][1] = isPrime(question) ? "yes": "no";
         }
-        return qna;
+        Engine.fullGame(RULES, qna);
     }
 
     public static boolean isPrime(int question) {
