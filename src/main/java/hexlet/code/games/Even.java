@@ -3,12 +3,9 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Even {
-    public static void even() {
-        String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        Engine.fullGame(rules, generateValues());
-    }
+    private static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-    public static String[][] generateValues() {
+    public static void even() {
         final int maxRandomValue = 100;
         String[][] qna = new String[Engine.getPlayTimes()][2];
         for (int i = 0; i < Engine.getPlayTimes(); i++) {
@@ -16,6 +13,7 @@ public class Even {
             qna[i][0] = String.valueOf(number);
             qna[i][1] = number % 2 == 0 ? "yes" : "no";
         }
-        return qna;
+
+        Engine.fullGame(RULES, qna);
     }
 }
