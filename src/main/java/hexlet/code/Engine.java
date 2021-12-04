@@ -18,39 +18,10 @@ public class Engine {
         final int playTimes = 3;
         return playTimes;
     }
-    public static void gameGreeting() {
-        System.out.print("""
-
-                Welcome to the Brain Games!
-                May I have your name?\s""");
-        setPlayerName();
-        System.out.println("Hello, " + getPlayerName() + "!");
-    }
 
     public static String scanValue() {
         Scanner scan = new Scanner(System.in);
         return scan.next();
-    }
-
-    public static void grats() {
-        System.out.println("Congratulations, " + getPlayerName() + "!");
-    }
-
-    public static String question(String questionValue) {
-        System.out.print("Question: " + questionValue
-                + "\nYour answer: ");
-        return Engine.scanValue();
-    }
-
-    public static boolean isCorrect(String correctAnswer, String answer) {
-        if (correctAnswer.equals(answer)) {
-            System.out.println("Correct!");
-            return false;
-        } else {
-            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.\n"
-                    + "Let's try again, " + getPlayerName() + "!");
-            return true;
-        }
     }
 
     public static int randomize(int number) {
@@ -59,14 +30,26 @@ public class Engine {
     }
 
     public static void fullGame(String rules, String[][] qna) {
-        gameGreeting();
+        System.out.print("""
+
+                Welcome to the Brain Games!
+                May I have your name?\s""");
+        setPlayerName();
+        System.out.println("Hello, " + getPlayerName() + "!");
         System.out.println(rules);
         for (int i = 0; i < getPlayTimes(); i++) {
-            String answer = question(qna[i][0]);
-            if (isCorrect(qna[i][1], answer)) {
+
+            System.out.print("Question: " + qna[i][0]
+                    + "\nYour answer: ");
+            String answer = Engine.scanValue();
+
+            if (qna[i][1].equals(answer)) {
+                System.out.println("Correct!");
+            } else {
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + qna[i][1] + "'.\n"
+                        + "Let's try again, " + getPlayerName() + "!");
                 return;
             }
         }
-        grats();
-    }
+        System.out.println("Congratulations, " + getPlayerName() + "!");    }
 }

@@ -7,8 +7,6 @@ import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
 public class App {
-    private static String gameNum;
-
     public static void main(String[] args) {
         System.out.print("""
                 Please enter the game number and press Enter.
@@ -20,13 +18,10 @@ public class App {
                 6 - Prime
                 0 - Exit
                 Your choice:\s""");
-        choice();
-    }
-    public static void choice() {
-        gameNum = Engine.scanValue();
+        String gameNum = Engine.scanValue();
         switch (gameNum) {
             case ("1"):
-                Engine.gameGreeting();
+                Cli.cli();
                 break;
             case ("2"):
                 Even.even();
@@ -47,7 +42,7 @@ public class App {
                 break;
             default:
                 System.out.print("Sorry I don't know this kind of game, please make choice again: ");
-                choice();
+                break;
         }
     }
 }
