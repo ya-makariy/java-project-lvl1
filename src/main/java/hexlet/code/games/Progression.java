@@ -11,9 +11,9 @@ public class Progression {
         final int maxStep = 20;
         final int maxPlusSize = 10;
         for (int i = 0; i < Engine.getPlayTimes(); i++) {
-            int rowLength = valueLength(maxPlusSize);
-            int step = 1 + value(maxStep);
-            int startValue = value(maxStartValue);
+            int rowLength = maxPlusSize / 2 + Engine.randomize(maxPlusSize);
+            int step = 1 - maxStep / 2 + Engine.randomize(maxStep);
+            int startValue = -maxStartValue / 2 + Engine.randomize(maxStartValue);
             int randomNumber = Engine.randomize(rowLength);
             int[] progressionArray = buildProgression(startValue, step, rowLength);
             qna[i][1] = String.valueOf(progressionArray[randomNumber]);
@@ -43,11 +43,11 @@ public class Progression {
         return question;
     }
 
-    public static int valueLength(int max) {
-        return (max / 2 + Engine.randomize(max));
-    }
-
-    public static int value(int max) {
-        return (-max / 2 + Engine.randomize(max));
-    }
+    //public static int valueLength(int max) {
+    //    return (max / 2 + Engine.randomize(max));
+    //}
+//
+    //public static int value(int max) {
+    //    return (-max / 2 + Engine.randomize(max));
+    //}
 }
