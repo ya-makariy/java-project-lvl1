@@ -3,13 +3,9 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Progression {
+    private static final String RULES = "What number is missing in the progression?";
 
     public static void progression() {
-        String rules = "What number is missing in the progression?";
-        Engine.fullGame(rules, generateValues());
-    }
-
-    public static String[][] generateValues() {
         String[][] qna = new String[Engine.getPlayTimes()][2];
         final int maxStartValue = 100;
         final int maxStep = 20;
@@ -19,9 +15,32 @@ public class Progression {
             int step = 1 + value(maxStep);
             int startValue = value(maxStartValue);
             int randomNumber = Engine.randomize(rowLength);
-            qna[i] = questionAnswer(rowLength, startValue, step, randomNumber);
+            int[] progressionArray = buildProgression(startValue, step, rowLength);
+            qna[i][1] = String.valueOf(progressionArray[randomNumber]);
+            qna[i][0] = buildQuestion(progressionArray, randomNumber);
         }
-        return qna;
+        Engine.fullGame(RULES, qna);
+    }
+
+    public static int[] buildProgression(int startValue, int step, int rowLength) {
+        int[] progressionArray = new int[rowLength];
+        progressionArray[0] = startValue;
+        for (int i = 1; i < rowLength; i++) {
+            progressionArray[i] = progressionArray[i - 1] + step;
+        }
+        return progressionArray;
+    }
+
+    public static String buildQuestion(int[] progressionArray, int randomNumber) {
+        String question = String.valueOf(progressionArray[0]);
+        for (int i = 1; i < progressionArray.length; i++) {
+            if (i == randomNumber) {
+                question = String.join(" ", question, "..");
+            } else {
+                question = String.join(" ", question, String.valueOf(progressionArray[i]));
+            }
+        }
+        return question;
     }
 
     public static int valueLength(int max) {
@@ -30,21 +49,5 @@ public class Progression {
 
     public static int value(int max) {
         return (-max / 2 + Engine.randomize(max));
-    }
-
-    public static String[] questionAnswer(int rowLength, int startValue, int step, int randomNumber) {
-        String[] qna = new String[2];
-        qna[0] = "";
-        for (int j = 0; j < rowLength; j++) {
-            startValue = startValue + step;
-            if (j == randomNumber) {
-                qna[1] = String.valueOf(startValue);
-                qna[0] = qna[0] + ".. ";
-            } else {
-                qna[0] = qna[0] + startValue + " ";
-            }
-        }
-        qna[0] = qna[0].substring(0, qna[0].length() - 1);
-        return qna;
     }
 }

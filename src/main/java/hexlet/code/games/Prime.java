@@ -10,7 +10,7 @@ public class Prime {
         for (int i = 0; i < Engine.getPlayTimes(); i++) {
             int question = 1 + Engine.randomize(maxNumber);
             qna[i][0] = String.valueOf(question);
-            qna[i][1] = isPrime(question) ? "yes": "no";
+            qna[i][1] = isPrime(question) ? "yes" : "no";
         }
         Engine.fullGame(RULES, qna);
     }
