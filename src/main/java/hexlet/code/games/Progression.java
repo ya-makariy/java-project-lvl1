@@ -42,12 +42,4 @@ public class Progression {
         }
         return question;
     }
-
-    //public static int valueLength(int max) {
-    //    return (max / 2 + Engine.randomize(max));
-    //}
-//
-    //public static int value(int max) {
-    //    return (-max / 2 + Engine.randomize(max));
-    //}
 }
