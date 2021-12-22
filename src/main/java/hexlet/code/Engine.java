@@ -3,7 +3,6 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    //private static String playerName;
     public static final int playTimes = 3;
 
 
