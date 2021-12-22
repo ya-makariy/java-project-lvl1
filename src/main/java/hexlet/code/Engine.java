@@ -1,32 +1,15 @@
 package hexlet.code;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
-    private static String playerName;
+    //private static String playerName;
+    public static final int playTimes = 3;
 
-    public static void setPlayerName() {
-        playerName = scanValue();
-    }
 
-    public static String getPlayerName() {
-        return playerName;
-    }
-
-    public static int getPlayTimes() {
-        final int playTimes = 3;
-        return playTimes;
-    }
-
-    public static String scanValue() {
+    public static String setPlayerName() {
         Scanner scan = new Scanner(System.in);
         return scan.next();
-    }
-
-    public static int randomize(int number) {
-        Random random = new Random();
-        return random.nextInt(number);
     }
 
     public static void fullGame(String rules, String[][] qna) {
@@ -34,22 +17,23 @@ public class Engine {
 
                 Welcome to the Brain Games!
                 May I have your name?\s""");
-        setPlayerName();
-        System.out.println("Hello, " + getPlayerName() + "!");
+        String playerName = setPlayerName();
+        System.out.println("Hello, " + playerName + "!");
         System.out.println(rules);
-        for (int i = 0; i < getPlayTimes(); i++) {
+        for (int i = 0; i < playTimes; i++) {
 
             System.out.print("Question: " + qna[i][0]
                     + "\nYour answer: ");
-            String answer = Engine.scanValue();
+            Scanner scan = new Scanner(System.in);
+            String answer = scan.next();
 
             if (qna[i][1].equals(answer)) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + qna[i][1] + "'.\n"
-                        + "Let's try again, " + getPlayerName() + "!");
+                        + "Let's try again, " + playerName + "!");
                 return;
             }
         }
-        System.out.println("Congratulations, " + getPlayerName() + "!");    }
+        System.out.println("Congratulations, " + playerName + "!");    }
 }

@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import static hexlet.code.Engine.getPlayerName;
 import static hexlet.code.Engine.setPlayerName;
 
 public class Cli {
@@ -9,7 +8,7 @@ public class Cli {
 
                 Welcome to the Brain Games!
                 May I have your name?\s""");
-        setPlayerName();
-        System.out.println("Hello, " + getPlayerName() + "!");
+        String playerName = setPlayerName();
+        System.out.println("Hello, " + playerName + "!");
     }
 }

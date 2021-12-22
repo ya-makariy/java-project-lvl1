@@ -6,6 +6,8 @@ import hexlet.code.games.Gcd;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
         System.out.print("""
@@ -18,7 +20,8 @@ public class App {
                 6 - Prime
                 0 - Exit
                 Your choice:\s""");
-        String gameNum = Engine.scanValue();
+        Scanner scan = new Scanner(System.in);
+        String gameNum = scan.next();
         switch (gameNum) {
             case ("1"):
                 Cli.cli();

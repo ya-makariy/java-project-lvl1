@@ -1,15 +1,15 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Gcd {
     private static final String RULES = "Find the greatest common divisor of given numbers.";
     public static void gcd() {
-        String[][] qna = new String[Engine.getPlayTimes()][2];
-        final int maxRandomValue = 100;
-        for (int i = 0; i < Engine.getPlayTimes(); i++) {
-            int numberA = 1 + Engine.randomize(maxRandomValue);
-            int numberB = 1 + Engine.randomize(maxRandomValue);
+        String[][] qna = new String[Engine.playTimes][2];
+        for (int i = 0; i < Engine.playTimes; i++) {
+            int numberA = 1 + Utils.randomize(Utils.maxRandomValue);
+            int numberB = 1 + Utils.randomize(Utils.maxRandomValue);
             qna[i][0] = numberA + " " + numberB;
             qna[i][1] = String.valueOf(findGcd(numberA, numberB));
         }
