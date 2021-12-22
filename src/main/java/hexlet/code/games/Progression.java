@@ -5,16 +5,16 @@ import hexlet.code.Utils;
 
 public class Progression {
     private static final String RULES = "What number is missing in the progression?";
-    private static final int maxStartValue = 100;
-    private static final int maxStep = 20;
-    private static final int maxPlusSize = 10;
+    private static final int MAXSTARTVALUE = 100;
+    private static final int MAXSTEP = 20;
+    private static final int MAXPLUSSIZE = 10;
 
     public static void progression() {
-        String[][] qna = new String[Engine.playTimes][2];
-        for (int i = 0; i < Engine.playTimes; i++) {
-            int rowLength = maxPlusSize / 2 + Utils.randomize(maxPlusSize);
-            int step = 1 - maxStep / 2 + Utils.randomize(maxStep);
-            int startValue = -maxStartValue / 2 + Utils.randomize(maxStartValue);
+        String[][] qna = new String[Engine.PLAYTIMES][2];
+        for (int i = 0; i < Engine.PLAYTIMES; i++) {
+            int rowLength = MAXPLUSSIZE / 2 + Utils.randomize(MAXPLUSSIZE);
+            int step = 1 - MAXSTEP / 2 + Utils.randomize(MAXSTEP);
+            int startValue = -MAXSTARTVALUE / 2 + Utils.randomize(MAXSTARTVALUE);
             int hiddenElementIndex = Utils.randomize(rowLength);
             int[] progression = buildProgression(startValue, step, rowLength);
             qna[i][1] = String.valueOf(progression[hiddenElementIndex]);

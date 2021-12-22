@@ -8,10 +8,10 @@ public class Calc {
     static final String[] SYMBOLS = new String[]{"+", "-", "*"};
 
     public static void calc() {
-        String[][] qna = new String[Engine.playTimes][2];
-        for (int i = 0; i < Engine.playTimes; i++) {
-            int numberA = 1 + Utils.randomize(Utils.maxRandomValue);
-            int numberB = 1 + Utils.randomize(Utils.maxRandomValue);
+        String[][] qna = new String[Engine.PLAYTIMES][2];
+        for (int i = 0; i < Engine.PLAYTIMES; i++) {
+            int numberA = 1 + Utils.randomize(Utils.MAXRANDOMVALUE);
+            int numberB = 1 + Utils.randomize(Utils.MAXRANDOMVALUE);
             String symbol = SYMBOLS[Utils.randomize(SYMBOLS.length)];
             switch (symbol) {
                 case ("+"):

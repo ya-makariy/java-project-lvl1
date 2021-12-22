@@ -3,7 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static final int playTimes = 3;
+    public static final int PLAYTIMES = 3;
 
 
     public static String setPlayerName() {
@@ -19,7 +19,7 @@ public class Engine {
         String playerName = setPlayerName();
         System.out.println("Hello, " + playerName + "!");
         System.out.println(rules);
-        for (int i = 0; i < playTimes; i++) {
+        for (int i = 0; i < PLAYTIMES; i++) {
 
             System.out.print("Question: " + qna[i][0]
                     + "\nYour answer: ");

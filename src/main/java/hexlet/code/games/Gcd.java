@@ -6,10 +6,10 @@ import hexlet.code.Utils;
 public class Gcd {
     private static final String RULES = "Find the greatest common divisor of given numbers.";
     public static void gcd() {
-        String[][] qna = new String[Engine.playTimes][2];
-        for (int i = 0; i < Engine.playTimes; i++) {
-            int numberA = 1 + Utils.randomize(Utils.maxRandomValue);
-            int numberB = 1 + Utils.randomize(Utils.maxRandomValue);
+        String[][] qna = new String[Engine.PLAYTIMES][2];
+        for (int i = 0; i < Engine.PLAYTIMES; i++) {
+            int numberA = 1 + Utils.randomize(Utils.MAXRANDOMVALUE);
+            int numberB = 1 + Utils.randomize(Utils.MAXRANDOMVALUE);
             qna[i][0] = numberA + " " + numberB;
             qna[i][1] = String.valueOf(findGcd(numberA, numberB));
         }
